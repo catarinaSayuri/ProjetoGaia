@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: #FAFBD4;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+}
+
+.nav a:hover {
+    border: 2px solid #FAFBD4;
+    border-radius: 20px;
+}

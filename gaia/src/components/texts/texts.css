@@ -1,0 +1,25 @@
+ .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* itens nos extremos */
+    align-items: center; /* alinhamento vertical */
+    padding: 2rem 4rem;  /* espaçamento opcional */
+   align-items: flex-start;
+    
+}
+
+.text-about-gaia {
+  max-width: 550px; /* controla a largura máxima do bloco de texto */
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+  line-height: 1.6; /* melhora a legibilidade */
+  font-size: 1rem;
+  color: #45453A;
+}
+
+.text-final{
+  color: #52833D;
+  font-size: 56px;
+  width: 600px;
+}

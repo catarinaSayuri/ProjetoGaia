@@ -1,0 +1,16 @@
+.section-final { 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 8vw;
+  gap: 2rem;
+  flex-wrap: wrap; 
+  background: linear-gradient(to bottom, #86B970 0%, #FFFFFF 100%);
+}
+
+
+.final-image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,13 @@
+#sectionGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  background-color: #ffff; 
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

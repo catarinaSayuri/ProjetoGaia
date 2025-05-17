@@ -1,0 +1,89 @@
+.title-section-info {
+  color: #FAFBD4;
+  font-size: 72px;
+  margin: 0.5rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+.subtitle-section-info {
+  color: #D9DABE;
+  font-size: 62px;
+  margin: 0.5rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+.text-home-info {
+  color: #FAFBD4;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.title-section-desc {
+  color: #696958;
+  font-size: 44px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.subtitle-section-desc {
+  color: #45453A;
+  font-size: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  margin-bottom: 10px;
+
+}
+
+.text-home-desc {
+  color: #45453A;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 100px;
+
+}
+
+.title-library {
+  color: #696958;
+  font-size: 40px;
+  margin-left: 114px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.title-video {
+  color: #696958;
+  font-size: 40px;
+  margin-left: 100px;
+}
+
+.title-sustentability {
+  color: #696958;
+  font-size: 40px;
+  margin-left: 320px;
+}
+
+.title-about {
+  color: #696958;
+  font-size: 40px;
+  margin-left: -30px;
+}
+
+.title-about-gaia {
+  color: #45453A;
+  font-size: 56px;
+}
+
+.title-research {
+  color: #45453A;
+  font-size: 56px;
+}
+
+.text-research {
+  color: #45453A;
+  font-size: 20px;
+  width: 80%;
+}

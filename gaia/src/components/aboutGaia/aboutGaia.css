@@ -1,0 +1,6 @@
+.container-text-about-gaia{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+    margin-left: 6%;
+}

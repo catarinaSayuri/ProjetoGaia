@@ -1,0 +1,59 @@
+.sectionAbout {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.gaiaLogo {
+  width: 420px;
+  height: 420px;
+  margin-left: -100px;
+}
+
+.pillars {
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+  margin: 24px 0;
+}
+
+.pillar {
+  text-align: center;
+}
+
+.learnMore {
+  background-color: #86B970;
+  color: #FAFBD4;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.learnMore:hover {
+  background-color: #FAFBD4;
+  color: #86B970;
+}
+
+
+.sustaintabilityPillars {
+  margin-top: 200px;
+
+}
+
+.sectionAbout {
+  position: relative;
+}

@@ -1,0 +1,42 @@
+.sectionLibrary {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 20px 0; /* só espaçamento vertical agora */
+}
+
+.sectionLibrary::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sectionLibrary::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.sectionLibrary > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+
+.arrow {
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    transition: background 0.3s;
+    border-radius: 40px;
+}
+
+.arrow:hover {
+    background: #f0f0f0;
+}
+
+.library-container {
+  padding: 0 1rem; /* aumenta espaço lateral */
+}
+

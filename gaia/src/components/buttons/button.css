@@ -1,0 +1,29 @@
+.arrow {
+  background-color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s transform 0.3s;
+}
+
+.arrow:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-60%) scale(1.05);
+}
+
+.arrow.left {
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow.right {
+  
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
