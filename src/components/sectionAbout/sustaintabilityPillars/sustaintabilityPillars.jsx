@@ -22,7 +22,7 @@ export const SustainabilityPillars = () => {
                     <p>Pilar Econômico</p>
                 </div>
             </div>
-            <button className="learnMore">Saiba mais!</button>
+            
         </div>
     );
 };
