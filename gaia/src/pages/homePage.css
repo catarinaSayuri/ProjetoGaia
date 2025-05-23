@@ -1,0 +1,10 @@
+.section-game-wrapper {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .section-game-wrapper {
+    display: none;
+  }
+}

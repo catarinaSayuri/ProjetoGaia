@@ -5,3 +5,12 @@
     padding: 1rem 3rem;  
 
 }
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .sectionDescription {
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 2rem;
+    }
+}

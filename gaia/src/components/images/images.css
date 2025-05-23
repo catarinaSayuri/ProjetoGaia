@@ -18,3 +18,20 @@
   z-index: 10;
   animation: floatIn 0.6s ease-in-out forwards;
 }
+
+@media (max-width: 768px) {
+
+
+  .imgHome {
+    display: none;
+  }
+
+   .imgGirls {
+    width: 70%;
+    height: 2%;
+    border-radius: 10%;
+ }
+
+ 
+
+}

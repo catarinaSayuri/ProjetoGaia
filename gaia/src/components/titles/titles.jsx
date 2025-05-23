@@ -6,6 +6,7 @@ export const TitleSectionInfo = () => {
     );
 };
 
+
 export const SubTitleSectionInfo = () => {
     return (
         <h2 className="subtitle-section-info">Escolas Sustentáveis!</h2>

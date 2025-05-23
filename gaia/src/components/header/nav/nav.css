@@ -1,22 +1,112 @@
 .nav {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .nav a {
-    color: #FAFBD4;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 0.5rem;
-    border: 2px solid transparent;
-    transition: border 0.3s ease;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-
+  color: #FAFBD4;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 .nav a:hover {
-    border: 2px solid #FAFBD4;
-    border-radius: 20px;
+  border: 2px solid #FAFBD4;
+  border-radius: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: auto;
+    max-height: 80vh;
+    width: 250px;
+    background-color: #86B970;
+    flex-direction: column;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 20;
+    overflow-y: auto;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .nav a {
+    font-size: 1.2rem;
+  }
+
+  /* Botão fechar */
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #FAFBD4;
+    cursor: pointer;
+    z-index: 25;
+  }
+}
+
+/* Botão hambúrguer */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #FAFBD4;
+  z-index: 30;
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+/* Fundo escuro - overlay */
+.menuOverlay {
+  display: none;
+}
+
+.menuOverlay.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 15;
+}
+/* Garantir que o botão fechar só aparece no mobile */
+.closeButton {
+  display: none; /* padrão: não mostrar */
+}
+
+@media (max-width: 768px) {
+  .closeButton {
+    display: block; /* mostrar só no mobile */
+  }
 }

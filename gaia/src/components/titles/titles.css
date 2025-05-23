@@ -87,3 +87,76 @@
   font-size: 20px;
   width: 80%;
 }
+
+@media (max-width: 768px) {
+  .title-section-info {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .subtitle-section-info {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .text-home-info {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .title-section-desc {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .subtitle-section-desc {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .text-home-desc {
+    font-size: 16px;
+    margin-bottom: 60px;
+    text-align: justify;
+  }
+
+  .title-library {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .title-video {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .title-sustentability {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .title-about {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .title-about-gaia {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .title-research {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .text-research {
+    font-size: 16px;
+    width: 100%;
+    text-align: justify;
+  }
+}

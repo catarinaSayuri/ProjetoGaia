@@ -1,62 +1,68 @@
-import { Scene } from 'phaser';
+import Phaser, { Scene } from 'phaser';
+
 class CenaInicial extends Scene {
-    // Definindo as dimensões do jogo
     alturaJogo = 600;
     larguraJogo = 800;
 
-    // Chamando o construtor da cena com o nome "CenaInicial"
     constructor() {
         super("CenaInicial");
     }
 
     preload() {
-        this.load.setPath("assets")
-        // Carregando as imagens que serão usadas na cena
+        this.load.setPath("assetsGame");
         this.load.image("capa", "capa.png");
         this.load.image("botaoJogar", "botaoJogar.png");
         this.load.image("botaoComoJogar", "botaoComoJogar.png");
+        this.load.image("iconeReciclagem", "iconeReciclagem.png");
     }
 
     create() {
-        // Adiciona a imagem de capa do jogo no centro da tela
-        this.add.image(this.larguraJogo / 2, 350, "capa").setScale(0.8);
+        // Fundo
+        this.add.image(this.larguraJogo / 2, this.alturaJogo / 2, "capa")
+            .setDisplaySize(this.larguraJogo, this.alturaJogo);
 
-        // Configuração do botão Jogar
-        this.botaoJogar = this.add.image(190, 390, "botaoJogar").setScale(0.4).setInteractive();
+        // Ícone no topo
+        this.add.image(this.larguraJogo / 2, 200, "iconeReciclagem").setScale(2.5);
 
-        // Define comportamento ao passar o mouse sobre o botão (muda o cursor para "pointer")
-        this.botaoJogar.on("pointerover", () => {
-            this.input.setDefaultCursor("pointer");
-        });
+        // Escalas dos botões
+        const escalaJogar = 2;
+        const escalaComo = 1.8; // escala maior para ficar mais visível
 
-        // Define comportamento quando o mouse sai do botão (cursor volta ao padrão)
-        this.botaoJogar.on("pointerout", () => {
-            this.input.setDefaultCursor("default");
-        });
+        // ================= BOTÃO JOGAR (centralizado) =================
+        const imgJogar = this.textures.get("botaoJogar").getSourceImage();
+        const larguraJogar = imgJogar.width * escalaJogar;
+        const alturaJogar = imgJogar.height * escalaJogar;
 
-        // Define o que acontece ao clicar no botão "Jogar"
-        this.botaoJogar.on("pointerdown", () => {
-            this.scene.start("Fase1")
-        })
+        this.botaoJogar = this.add.image(this.larguraJogo / 2, 400, "botaoJogar")
+            .setScale(escalaJogar)
+            .setInteractive(new Phaser.Geom.Rectangle(0, 0, imgJogar.width, imgJogar.height), Phaser.Geom.Rectangle.Contains);
 
-        // Configuração do botão "Como Jogar"
-        this.botaoComoJogar = this.add.image(590, 390, "botaoComoJogar").setScale(0.4).setInteractive();
+        this.botaoJogar.input.hitArea.setSize(larguraJogar, alturaJogar);
 
-        // Define comportamento ao passar o mouse sobre o botão "Como Jogar"
-        this.botaoComoJogar.on("pointerover", () => {
-            this.input.setDefaultCursor("pointer");
-        });
-        // Define comportamento quando o mouse sai do botão "Como Jogar"
-        this.botaoComoJogar.on("pointerout", () => {
-            this.input.setDefaultCursor("default");
-        });
-        // Define o que acontece ao clicar no botão "Como Jogar"
-        this.botaoComoJogar.on("pointerdown", () => {
-            // Quando clicado, inicia a cena "ComoJogar"
-            this.scene.start("ComoJogar")
-        })
+        this.botaoJogar.on("pointerover", () => this.input.setDefaultCursor("pointer"));
+        this.botaoJogar.on("pointerout", () => this.input.setDefaultCursor("default"));
+        this.botaoJogar.on("pointerdown", () => this.scene.start("FaseOrganica"));
+
+        // ================= BOTÃO COMO JOGAR (canto superior esquerdo) =================
+        const imgComo = this.textures.get("botaoComoJogar").getSourceImage();
+        const larguraComo = imgComo.width * escalaComo;
+        const alturaComo = imgComo.height * escalaComo;
+
+        // Posiciona no canto superior esquerdo, com margem de 20 pixels de cada lado
+        const margem = 20;
+        const xComo = margem + larguraComo / 2;
+        const yComo = margem + alturaComo / 2;
+
+        this.botaoComoJogar = this.add.image(xComo, yComo, "botaoComoJogar")
+            .setScale(escalaComo)
+            .setInteractive(new Phaser.Geom.Rectangle(0, 0, imgComo.width, imgComo.height), Phaser.Geom.Rectangle.Contains);
+
+        this.botaoComoJogar.input.hitArea.setSize(larguraComo, alturaComo);
+
+        this.botaoComoJogar.on("pointerover", () => this.input.setDefaultCursor("pointer"));
+        this.botaoComoJogar.on("pointerout", () => this.input.setDefaultCursor("default"));
+        this.botaoComoJogar.on("pointerdown", () => this.scene.start("ComoJogar"));
     }
-
 }
 
-export default CenaInicial
+export default CenaInicial;

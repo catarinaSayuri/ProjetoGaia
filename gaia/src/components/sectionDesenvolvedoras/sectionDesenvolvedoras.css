@@ -1,0 +1,64 @@
+.section-desenvolvedoras {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.section-desenvolvedoras h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Responsivo: empilha os cards em telas pequenas */
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card-dev {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-dev a {
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-dev a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card-dev img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+}
+
+.card-dev .nome {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.card-dev .tarefa {
+  font-size: 0.9rem;
+  color: #666666;
+}

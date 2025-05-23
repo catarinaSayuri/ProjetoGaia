@@ -2,6 +2,7 @@ import pilarAmbiental from '../../../assets/icons/pilarSustentavelIcon.png';
 import pilarSocial from '../../../assets/icons/pilarSocialIcon.png';
 import pilarEconomico from '../../../assets/icons/pilarEconomicoIcon.png';
 import {TitleSustentability } from '../../titles/titles';
+import '../sustaintabilityPillars/sustaintabilityPillars.css'
 
 export const SustainabilityPillars = () => {
     return (

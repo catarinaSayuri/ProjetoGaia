@@ -1,126 +1,186 @@
+/* WRAPPER GERAL DO CARROSSEL */
 .carouselWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px; /* Espaço entre as setas e o carrossel */
-  padding: 0 32px; /* Espaço nas bordas da tela */
+  gap: 16px;
+  padding: 0 32px;
   overflow: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
+/* LISTA DO CARROSSEL */
 .sectionVideoCarousel {
   display: flex;
   gap: 24px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 16px 0; /* Espaço superior e inferior */
+  scroll-snap-type: x mandatory;
+  padding: 16px 0;
 }
 
+/* CADA ITEM DO CARROSSEL */
 .sectionVideoCarousel > * {
-    scroll-snap-align: start;
-    flex: 0 0 auto;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
 }
 
+/* CARD DE VÍDEO */
 .cardVideo {
-    width: 300px;
-    height: 592px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    color: #FAFBD4;
+  width: 300px;
+  height: 592px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #FAFBD4;
 }
 
+/* IMAGEM DO VÍDEO */
 .imageWrapper {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
 }
 
 .videoImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* BOTÃO DE PLAY */
 .playButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    padding: 10px 14px;
-    text-decoration: none;
-    color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #000;
 }
 
+/* CONTEÚDO DO CARD */
 .videoContent {
-    
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .description {
-    font-size: 0.9rem;
-    margin-bottom: 12px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
 }
 
 .author {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 
 .name {
-    font-weight: bold;
-    font-size: 0.85rem;
+  font-weight: bold;
+  font-size: 0.85rem;
 }
 
 .role {
-    font-size: 0.75rem;
-    color: #FAFBD4;
+  font-size: 0.75rem;
+  color: #FAFBD4;
 }
 
+/* BOTÃO ASSISTIR */
 .watchButton {
-    align-self: flex-start;
-    background: #FAFBD4;
-    color: #45453A;
-    padding: 8px 14px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: background 0.3s;
+  align-self: flex-start;
+  background: #FAFBD4;
+  color: #45453A;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.3s;
 }
 
 .watchButton:hover {
-    background: #2c2c24;
-    color: #FAFBD4;
+  background: #2c2c24;
+  color: #FAFBD4;
 }
 
+/* SETAS DE NAVEGAÇÃO */
 .arrow {
-    background: #ffffff;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
-    transition: background 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  transition: background 0.3s;
 }
 
 .arrow:hover {
-    background: #f0f0f0;
+  background: #f0f0f0;
 }
+
+.arrow.left {
+  left: 16px;
+}
+
+.arrow.right {
+  right: 16px;
+}
+
+/* BARRA DE ROLAGEM ESTILIZADA */
+.sectionVideoCarousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.sectionVideoCarousel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .cardVideo {
+    width: 260px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardVideo {
+    width: 220px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .carouselWrapper {
+    padding: 0 16px;
+  }
+
+  .sectionVideoCarousel {
+    gap: 16px;
+  }
+}
+    

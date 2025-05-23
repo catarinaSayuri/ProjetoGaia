@@ -12,7 +12,7 @@ class ComoJogar extends Scene {
     }
 
     preload() {
-        this.load.setPath("assets")
+        this.load.setPath("assetsGame");
         // Carregando a imagem de fundo da explicação do jogo
         this.load.image("fundoExplicacao", "fundoExplicacao.png");
         // Carregando a imagem do botão de voltar

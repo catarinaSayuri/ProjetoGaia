@@ -1,26 +1,51 @@
-import { AUTO, Game } from "phaser"
+import { AUTO, Game, Scale } from "phaser";
 import CenaInicial from "./CenaInicial";
-import Fase1 from "./Fase1";
 import ComoJogar from "./ComoJogar";
-import Fase2 from "./Fase2";
-import FaseOrganica from "./Fase1";
+import FaseOrganica from "./FaseOrganica";
+import FasePlastico from "./FasePlastico";
+import FaseMetal from "./FaseMetal";
+import FaseVidro from "./FaseVidro";
+import FasePapel from "./FasePapel";
+import faseAmarela from "./cenasFases/faseAmarela";
+import faseAzul from "./cenasFases/faseAzul";
+import faseMarrom from "./cenasFases/faseMarrom";
+import faseVerde from "./cenasFases/faseVerde";
+import faseVermelha from "./cenasFases/faseVermelha";
 
 const config = {
     type: AUTO,
-    width: 800, // Largura da tela do jogo
-    height: 600, // Altura da tela do jogo
+    width: 800,
+    height: 600,
+    scale: {
+        mode: Scale.FIT, // Permite adaptar ao tamanho da tela
+        autoCenter: Scale.CENTER_BOTH
+    },
     physics: {
-        default: 'arcade', // Define a física do jogo como arcade
+        default: 'arcade',
         arcade: {
-            gravity: { y: 300 }, // Define a gravidade para puxar objetos para baixo
-            debug: true // Habilita a exibição de hitboxes para depuração
+            gravity: { y: 300 },
+            debug: false
         }
     },
     parent: "game",
-    scene: [FaseOrganica] 
+    scene: [
+        CenaInicial,
+        FaseOrganica,
+        faseVermelha,
+        faseVerde,
+        faseMarrom,
+        faseAzul,
+        faseAmarela,
+        ComoJogar,
+        FasePapel,
+        FasePlastico,
+        FaseMetal,
+        FaseVidro
+    ]
 };
 
 const StartGame = (parent) => {
-    return new Game({...config, parent});
-}
-export default StartGame
+    return new Game({ ...config, parent });
+};
+
+export default StartGame;

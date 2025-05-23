@@ -16,17 +16,10 @@ export const Footer = () => {
             { label: 'Sobre nós', href: '#sobre-nos' },
             { label: 'Biblioteca Verde', href: '#biblioteca-verde' },
             { label: 'Sustentabilidade em Ação', href: '#sustentabilidade' },
-            { label: 'Sobre a iniciativa', href: '#sobre-iniciativa' },
+            { label: 'Sobre a iniciativa', href: '#sobre-iniciativa' }, { label: 'Desenvolvedoras', href: '#desenvolvedoras' },
           ]}
         />
-        <FooterColumn
-          title="Suporte"
-          iconSrc={contatoIcon}
-          links={[
-            { label: 'Contate-nos', href: '#contato' },
-            { label: 'Desenvolvedores', href: '#' },
-          ]}
-        />
+       
 
 
       </div>
