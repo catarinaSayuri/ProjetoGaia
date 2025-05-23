@@ -1,6 +1,6 @@
 # Projeto Gaia
 
-![Logo Gaia](https://github.com/catarinaSayuri/ProjetoGaia/blob/main/gaia/public/assets/logoGaia.png?raw=true) <!-- Ajuste o caminho se necessário -->
+![Logo Gaia](/src/assets/images/imageGaia.png) <!-- Ajuste o caminho se necessário -->
 
 ## Sobre o Projeto
 
