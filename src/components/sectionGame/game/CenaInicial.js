@@ -26,7 +26,7 @@ class CenaInicial extends Scene {
 
         // Escalas dos botões
         const escalaJogar = 2;
-        const escalaComo = 1.8; // escala maior para ficar mais visível
+        const escalaComo = 1.8;
 
         // ================= BOTÃO JOGAR (centralizado) =================
         const imgJogar = this.textures.get("botaoJogar").getSourceImage();
@@ -43,15 +43,13 @@ class CenaInicial extends Scene {
         this.botaoJogar.on("pointerout", () => this.input.setDefaultCursor("default"));
         this.botaoJogar.on("pointerdown", () => this.scene.start("FaseOrganica"));
 
-        // ================= BOTÃO COMO JOGAR (canto superior esquerdo) =================
+        // ================= BOTÃO COMO JOGAR (mais à esquerda e mais acima) =================
         const imgComo = this.textures.get("botaoComoJogar").getSourceImage();
         const larguraComo = imgComo.width * escalaComo;
         const alturaComo = imgComo.height * escalaComo;
 
-        // Posiciona no canto superior esquerdo, com margem de 20 pixels de cada lado
-        const margem = 20;
-        const xComo = margem + larguraComo / 2;
-        const yComo = margem + alturaComo / 2;
+        const xComo = 80;  // Mais à esquerda
+        const yComo = 60;  // Mais para cima
 
         this.botaoComoJogar = this.add.image(xComo, yComo, "botaoComoJogar")
             .setScale(escalaComo)

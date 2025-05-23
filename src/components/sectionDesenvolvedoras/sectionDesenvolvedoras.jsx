@@ -21,7 +21,7 @@ export const SectionDesenvolvedoras = () => {
 
         },
         {
-            nome: "Isabela Maia",
+            nome: "Isabelly Maia",
             tarefa: "Líder",
             imagem: isamaia,
             linkedin: "https://www.linkedin.com/in/isabellymaia/"

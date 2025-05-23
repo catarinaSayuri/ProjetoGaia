@@ -2,44 +2,41 @@ import { Scene } from 'phaser';
 
 class ComoJogar extends Scene {
 
-    // Definindo as dimensões do jogo
-    alturaJogo = 600;
-    larguraJogo = 800;
-
     constructor() {
-        // Chamando o construtor da cena com o nome "ComoJogar"
         super("ComoJogar");
     }
 
     preload() {
         this.load.setPath("assetsGame");
-        // Carregando a imagem de fundo da explicação do jogo
         this.load.image("fundoExplicacao", "fundoExplicacao.png");
-        // Carregando a imagem do botão de voltar
         this.load.image("botaoVoltar", "botaoVoltar.png");
     }
 
     create() {
-        // Adiciona a imagem de fundo no centro da tela
-        this.add.image(this.larguraJogo / 2, this.alturaJogo / 2, "fundoExplicacao").setScale(0.8);
+        const largura = this.scale.width;
+        const altura = this.scale.height;
 
-        // Configuração do botão "Voltar"
-        this.botaoVoltar = this.add.image(700, 70, "botaoVoltar").setScale(0.3).setInteractive();
+        // Centraliza o fundo e escala para cobrir a tela toda
+        this.add.image(largura / 2, altura / 2, "fundoExplicacao")
+            .setDisplaySize(largura, altura); // Ocupa todo o espaço
 
-        // Quando o mouse passa sobre o botão, muda o cursor para "pointer"
+        // Posiciona o botão mais à direita e um pouco mais abaixo, com tamanho reduzido
+        this.botaoVoltar = this.add.image(largura - 60, 100, "botaoVoltar") // x alterado de -100 para -60
+            .setScale(0.2)
+            .setInteractive();
+
         this.botaoVoltar.on("pointerover", () => {
             this.input.setDefaultCursor("pointer");
         });
-        // Quando o mouse sai do botão, retorna o cursor ao padrão
+
         this.botaoVoltar.on("pointerout", () => {
             this.input.setDefaultCursor("default");
         });
-        // Quando o botão for pressionado, retorna para a cena inicial do jogo
-        this.botaoVoltar.on("pointerdown", () => {
-            this.scene.start("CenaInicial")
-        })
-    }
 
+        this.botaoVoltar.on("pointerdown", () => {
+            this.scene.start("CenaInicial");
+        });
+    }
 }
 
-export default ComoJogar
+export default ComoJogar;
