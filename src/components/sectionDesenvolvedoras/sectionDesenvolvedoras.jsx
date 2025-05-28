@@ -3,6 +3,7 @@ import catarina from '../../assets/images/catarina.jpg';
 import iasmin from '../../assets/images/iasmin.jpg';
 import isamaia from '../../assets/images/isamaia.jpg';
 import yasmim from '../../assets/images/yasmim.jpg';
+import lavinia from '../../assets/images/lavinia.jpg';
 
 export const SectionDesenvolvedoras = () => {
     const desenvolvedoras = [
@@ -32,6 +33,13 @@ export const SectionDesenvolvedoras = () => {
             tarefa: "Designer",
             imagem: yasmim,
             linkedin: "https://www.linkedin.com/in/yasmin-minario/"
+
+        },
+        {
+            nome: "Lavínia Mendonça",
+            tarefa: "Game Designer",
+            imagem: lavinia,
+            linkedin: "https://www.linkedin.com/in/lavinia-mendonça/"
 
         },
     ];
