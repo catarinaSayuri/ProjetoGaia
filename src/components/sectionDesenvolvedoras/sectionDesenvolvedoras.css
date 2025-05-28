@@ -34,14 +34,15 @@
 .card-dev a {
   display: block;
   border-radius: 50%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .card-dev a:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px) scale(1.03);
+  filter: brightness(1.05);
   cursor: pointer;
 }
+
 
 .card-dev img {
   width: 112px;

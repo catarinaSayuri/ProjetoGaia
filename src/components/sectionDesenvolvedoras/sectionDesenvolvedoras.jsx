@@ -39,7 +39,7 @@ export const SectionDesenvolvedoras = () => {
             nome: "Lavínia Mendonça",
             tarefa: "Game Designer",
             imagem: lavinia,
-            linkedin: "https://www.linkedin.com/in/lavinia-mendonça/"
+            linkedin: "https://www.linkedin.com/in/lav%C3%ADnia-mendon%C3%A7a-b4b977243/"
 
         },
     ];
